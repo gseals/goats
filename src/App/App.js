@@ -5,6 +5,8 @@ import goatData from '../helpers/data/goatData';
 
 import GoatCorral from '../components/GoatCorral/GoatCorral';
 
+import AvailableGoats from '../components/AvailableGoats/AvailableGoats';
+
 class App extends React.Component {
   state = {
     goats: [],
@@ -30,6 +32,8 @@ class App extends React.Component {
   render() {
     return (
     <div className="App">
+      <h1>Underwater Goat Yoga</h1>
+      <AvailableGoats goats={this.state.goats} />
       <button className='btn btn-danger'>Bootstrap Button</button>
       <GoatCorral goats={this.state.goats} freeGoat={this.freeGoat} captureGoat={this.captureGoat}/>
     </div>
